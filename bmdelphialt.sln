@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bmdelphialt", "bmdelphialt\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenu", "MainMenu\MainMenu.csproj", "{284A9536-145B-424F-BDDB-2B558290FA54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterMaintenance", "MAsterMaintenance\MasterMaintenance.csproj", "{3BB163F9-7604-4526-A76C-1A40F8127FD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{284A9536-145B-424F-BDDB-2B558290FA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{284A9536-145B-424F-BDDB-2B558290FA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{284A9536-145B-424F-BDDB-2B558290FA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BB163F9-7604-4526-A76C-1A40F8127FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BB163F9-7604-4526-A76C-1A40F8127FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BB163F9-7604-4526-A76C-1A40F8127FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BB163F9-7604-4526-A76C-1A40F8127FD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

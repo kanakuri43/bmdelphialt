@@ -24,4 +24,12 @@ public class CommonDefinitions
         Line = 3,       // 行単位
     }
 
+    public enum OperationType
+    {
+        Sales = 1,
+        Purchase = 2,
+        Receipt = 3,
+        Payment = 4,
+    }
+
 }
