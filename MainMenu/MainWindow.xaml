@@ -84,15 +84,15 @@
                     Grid.RowSpan="2"/>
 
             <TextBlock Grid.Column="1" Grid.Row="0"
-                        Text="Home" 
+                        Text="Categories" 
                         FontSize="20"
                         TextAlignment="Center" 
                         VerticalAlignment="Center"/>
 
             <StackPanel Grid.Column="1" 
                         Grid.Row="1" 
-                        IsEnabled="false">
-                <Button Content="日次処理" Height="50" FontSize="16" Margin="4" />
+                        IsEnabled="True">
+                <Button Content="日次処理" Height="50" FontSize="16" Margin="4"/>
                 <Button Content="請求処理" Height="50" FontSize="16" Margin="4" />
                 <Button Content="月次処理" Height="50" FontSize="16" Margin="4" />
 
@@ -104,7 +104,7 @@
                     Grid.RowSpan="2"/>
 
             <TextBlock Grid.Column="2" Grid.Row="0"
-                       Text="Settings" 
+                       Text="Operations" 
                        FontSize="20"
                        TextAlignment="Center" 
                        VerticalAlignment="Center"/>

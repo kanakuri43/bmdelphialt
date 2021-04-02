@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 
-namespace MasterMaintenance
+namespace Sales
 {
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック
