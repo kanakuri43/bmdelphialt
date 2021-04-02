@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bmdelphialt", "bmdelphialt\bmdelphialt.csproj", "{1E7A1AA1-D552-4B58-A114-2091EC3AF4AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenu", "MainMenu\MainMenu.csproj", "{284A9536-145B-424F-BDDB-2B558290FA54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E7A1AA1-D552-4B58-A114-2091EC3AF4AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E7A1AA1-D552-4B58-A114-2091EC3AF4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E7A1AA1-D552-4B58-A114-2091EC3AF4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E7A1AA1-D552-4B58-A114-2091EC3AF4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284A9536-145B-424F-BDDB-2B558290FA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284A9536-145B-424F-BDDB-2B558290FA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284A9536-145B-424F-BDDB-2B558290FA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284A9536-145B-424F-BDDB-2B558290FA54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DEDEB80-1ADC-4ED6-92BB-DDF7587D84DE}
+	EndGlobalSection
+EndGlobal
