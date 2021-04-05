@@ -28,15 +28,13 @@
                 </Border.Background>
             </Border>
 
-            <StackPanel VerticalAlignment="Center" >
-                <TextBlock Text="Katekero"
-                           FontWeight="Bold" 
-                           FontFamily="Century Gothic"
-                           FontSize="32"
-                           Foreground="White"
-                           HorizontalAlignment="Center"/>
-
-            </StackPanel>
+            <TextBlock Text="Katekero"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold" 
+                       FontFamily="Century Gothic"
+                       FontSize="32"
+                       Foreground="White"
+                       HorizontalAlignment="Center"/>
 
             <StackPanel Grid.Row="1" Width="235"
                         HorizontalAlignment="Center">

@@ -18,7 +18,8 @@
             <RowDefinition/>
             <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
-        
+
+
         <Grid Background="RoyalBlue" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -34,15 +35,18 @@
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"/> 
+                <RowDefinition Height="100"/>
                 <RowDefinition/>
-                <RowDefinition Height="100"/> 
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            
+
+            <Border Background="RoyalBlue"
+                    Grid.RowSpan="3"
+                    Opacity="0.7"/>
+
             <!--header-->
-            <Grid Grid.Row="0" Margin="4"> 
+            <Grid Grid.Row="0" Margin="4">
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -52,52 +56,64 @@
                         <ColumnDefinition Width="60"/>
                         <ColumnDefinition Width="100"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="伝票番号" Grid.Column="0"/>
-                    <TextBox Text="" Grid.Column="1"/>
+                    <TextBlock Text="伝票番号"
+                               TextAlignment="Right"
+                               VerticalAlignment="Center"
+                               Grid.Column="0"/>
+                    <TextBox Text="12345" Grid.Column="1" />
                 </Grid>
-                      
+
                 <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="60"/>
-                        <ColumnDefinition Width="200"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="得意先"
-                           Grid.Column="0"
-                           VerticalAlignment="Center"/>
-                    <TextBox Grid.Column="1"/>
-                    <TextBox x:Name="CustomerNameTextBox"
-                               Grid.Column="2"/>
-                </Grid>
-                <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="60"/>
                         <ColumnDefinition Width="100"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="住所"
-                           Grid.Column="0"
-                           VerticalAlignment="Center"/>
-                    <TextBox x:Name="CustomerAddressTextBox"
-                             Grid.Column="1"/>
-                    <TextBox x:Name="CustomerZipTextBox"
-                             Grid.Column="2"/>
+                    <TextBlock Text="得意先"
+                               TextAlignment="Right"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1"
+                             Text="999"/>
+                    <TextBox x:Name="CustomerNameTextBox"
+                             BorderThickness="0"
+                             VerticalAlignment="Center"
+                             Grid.Column="2"
+                             Text="オビサン株式会社"/>
                 </Grid>
-                <Grid Grid.Row="3">
+                <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="400"/>
                         <ColumnDefinition Width="60"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+                    <TextBlock Text=""
+                               Grid.Column="0"
+                               TextAlignment="Right"
+                               VerticalAlignment="Center"/>
+                    <TextBox x:Name="CustomerAddressTextBox"
+                               Grid.Column="1"
+                               BorderThickness="0"
+                               Text="990-8668"/>
+                    <TextBox x:Name="CustomerZipTextBox"
+                             Grid.Column="2"
+                             BorderThickness="0"
+                             Text="山形県山形市"/>
                     <TextBlock Text="TEL"
-                           Grid.Column="0"
-                           VerticalAlignment="Center"/>
+                               Grid.Column="3"
+                               TextAlignment="Right"
+                               VerticalAlignment="Center"/>
                     <TextBox x:Name="CustomerTelTextBox"
-                             Grid.Column="1"/>
+                             Grid.Column="4"
+                             BorderThickness="0"
+                             Text="023-633-5511"/>
                 </Grid>
             </Grid>
-            
+
             <!--detail-->
-            <Grid Grid.Row="1" Margin="4">
+            <Grid Grid.Row="1" Margin="4,10,4,4">
                 <!-- DataGridの定義 -->
                 <DataGrid x:Name="uxDataGrid" 
                   HeadersVisibility="Column" 
@@ -136,7 +152,7 @@
                                 <DataTemplate >
                                     <StackPanel Orientation="Vertical" Margin="0" VerticalAlignment="Center">
                                         <TextBlock Text="{Binding メーカー}" Padding="5,0,5,0" />
-                                        <Border BorderThickness="0,0,0,1"  BorderBrush="Gray"/>
+                                        <Border BorderThickness="0,0,0,1"  />
                                         <TextBlock Text="{Binding 商品コード}" Padding="5,0,5,0" />
                                         <Border BorderThickness="0,0,0,1"  BorderBrush="Gray"/>
                                         <TextBlock Text="{Binding 商品名}" Padding="5,0,5,0" FontWeight="Bold"/>
@@ -216,9 +232,9 @@
                 </DataGrid>
 
             </Grid>
-            
+
             <!--footer-->
-            <Grid Grid.Row="2" Margin="4">
+            <Grid Grid.Row="2" Margin="4,10,10,4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="600"/>
                     <ColumnDefinition/>
@@ -231,8 +247,10 @@
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal" Grid.Row="0">
                         <Button Content="行挿入" 
+                                Margin="2"
                             Width="100"/>
                         <Button Content="行削除" 
+                                Margin="2"
                             Width="100"/>
 
                     </StackPanel>
@@ -245,11 +263,11 @@
                         <TextBlock Text="伝票摘要" 
                                Width="60"
                                VerticalAlignment="Center"
-                               Grid.Column="0"/>
-                        <TextBox Grid.Column="1"/>
+                               Grid.Column="0" Margin="0,7,0,6"/>
+                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,10,0"/>
                     </Grid>
                 </Grid>
-                <Grid Grid.Column="1"  >
+                <Grid Grid.Column="1" >
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
@@ -259,17 +277,48 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="小計" Width="60" Grid.Row="0" Grid.Column="0" />
-                    <TextBlock Grid.Row="0" Grid.Column="1" />
-                    <TextBlock Text="消費税" Width="60" Grid.Row="1" Grid.Column="0"/>
-                    <TextBlock Grid.Row="1" Grid.Column="1" />
-                    <TextBlock Text="税込計" Width="60"  Grid.Row="2" Grid.Column="0"/>
-                    <TextBlock  Grid.Row="2" Grid.Column="1"/>
+
+                    <Border Background="Silver"
+                    Grid.RowSpan="3"
+                    Opacity="0.2"/>
+
+                    <TextBlock Text="小計"  
+                               Width="60"  
+                               Grid.Row="0" 
+                               Grid.Column="0" 
+                               VerticalAlignment="Center"
+                               />
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="1,000" TextAlignment="Right"/>
+
+                    <TextBlock Text="消費税" 
+                               Width="60" 
+                               VerticalAlignment="Center"
+                               Grid.Row="1" 
+                               Grid.Column="0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="100" TextAlignment="Right"/>
+
+                    <TextBlock Text="税込計" 
+                               VerticalAlignment="Center"
+                               Width="60"  
+                               Grid.Row="2" 
+                               Grid.Column="0"/>
+                    <TextBlock  Grid.Row="2" Grid.Column="1" Text="1,100" TextAlignment="Right"/>
                 </Grid>
             </Grid>
         </Grid>
-        
+
         <Grid Background="RoyalBlue" 
-              Grid.Row="2" />
+              Grid.Row="2" >
+            <StackPanel Orientation="Horizontal">
+                <Button Content="F1" Width="90" />
+                <Button Content="F2" Width="90" />
+                <Button Content="F3" Width="90" />
+                <Button Content="F4" Width="90" />
+                <Button Content="F5" Width="90" />
+                <Button Content="F6" Width="90" />
+                <Button Content="F7" Width="90" />
+                <Button Content="F8" Width="90" />
+            </StackPanel>
+        </Grid>
     </Grid>
 </mah:MetroWindow>
