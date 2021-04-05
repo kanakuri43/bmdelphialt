@@ -1,0 +1,110 @@
+﻿<mah:MetroWindow x:Class="SalesEntry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesEntry"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Katekero" 
+        TitleCharacterCasing="Normal"
+        Height="600" Width="800"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"
+        WindowTransitionsEnabled="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid Background="RoyalBlue" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <TextBlock Text="SalesEntry" 
+                   Grid.Column="0"
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   Margin="10,0,0,0"/>
+
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/> 
+                <RowDefinition/>
+                <RowDefinition Height="100"/> 
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"> <!--header-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="得意先"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                    <TextBox Grid.Column="1"/>
+                    <TextBox x:Name="CustomerNameTextBox"
+                               Grid.Column="2"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="住所"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                    <TextBox x:Name="CustomerAddressTextBox"
+                             Grid.Column="1"/>
+                    <TextBox x:Name="CustomerZipTextBox"
+                             Grid.Column="2"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="TEL"
+                           Grid.Column="0"
+                           VerticalAlignment="Center"/>
+                    <TextBox x:Name="CustomerTelTextBox"
+                             Grid.Column="1"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1"> <!--detail-->
+                <TextBlock Text="明細"/>
+            </Grid>
+            <Grid Grid.Row="2"> <!--footer-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="伝票摘要" 
+                               Width="60"
+                               VerticalAlignment="Center"
+                               Grid.Column="0"/>
+                    <TextBox Grid.Column="1"/>
+                </Grid>
+            </Grid>
+            </Grid>
+        <Grid Background="RoyalBlue" 
+              Grid.Row="2" />
+    </Grid>
+</mah:MetroWindow>

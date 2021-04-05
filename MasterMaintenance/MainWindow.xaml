@@ -13,6 +13,26 @@
         WindowStartupLocation="CenterScreen"
         WindowTransitionsEnabled="False">
     <Grid>
-        <TextBlock Text="MasterMaintenance" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid Background="RoyalBlue" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <TextBlock Text="MasterMaintenance" 
+                   Grid.Column="0"
+                   Foreground="White"
+                   VerticalAlignment="Center"
+                   Margin="10,0,0,0"/>
+        
+        
+        
+        <Grid Background="RoyalBlue" 
+              Grid.Row="2" />
     </Grid>
 </mah:MetroWindow>
